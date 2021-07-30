@@ -1,7 +1,5 @@
 package com.paymentchain.billing;
 
-import java.util.Base64;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.paymentchain.billing.common.InvoiceRequestMapper;
 import com.paymentchain.billing.common.InvoiceResposeMapper;
@@ -10,23 +8,25 @@ import com.paymentchain.billing.dto.InvoiceRequest;
 import com.paymentchain.billing.dto.InvoiceResponse;
 import com.paymentchain.billing.entities.Invoice;
 import com.paymentchain.billing.respository.InvoiceRepository;
-
-import org.junit.Assert;
-import org.junit.Test;
+import java.util.Base64;
+import java.util.Optional;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.runner.RunWith;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.result;
 
-import io.swagger.v3.oas.models.media.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
+import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 /**
  * @author sotobotero This set of test allow check the behavior of the web layer

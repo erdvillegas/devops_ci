@@ -11,8 +11,6 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import lombok.Data;
 
-
-
 /**
  *
  * @author sotobotero
@@ -21,20 +19,34 @@ import lombok.Data;
 @Data
 public class Invoice {
    @Id
-  @GeneratedValue(strategy=GenerationType.AUTO)
+   @GeneratedValue(strategy = GenerationType.AUTO)
    private long id;
    private long customerId;
    private String number;
    private String detail;
-   private double amount;  
+   private double amount;
 
-   public void setId(long customerId)   
-   {
-      this.id = customerId; 
+   public void setId(long customerId) {
+      this.id = customerId;
    }
 
-   public long getId()
-   {
+   public long getId() {
       return this.id;
+   }
+
+   public void setCustomerId(long customer) {
+      this.customerId = customer;
+   }
+
+   public void setNumber(String number) {
+      this.number = number;
+   }
+
+   public void setDetail(String detail) {
+      this.detail = detail;
+   }
+
+   public void setAmount(double amount) {
+      this.amount = amount;
    }
 }
