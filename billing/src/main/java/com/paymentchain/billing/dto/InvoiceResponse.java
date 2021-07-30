@@ -31,4 +31,20 @@ public class InvoiceResponse {
      this.invoiceId = invoiceId;
    }
 
+public void setCustomer(long customerId) {
+  this.customer = customerId;
+}
+
+public void setNumber(String number) {
+  this.number = number;
+}
+
+public void setDetail(String detail) {
+  this.detail = detail;
+}
+
+public void setAmount(double amount) {
+  this.amount = amount;
+}
+
 }

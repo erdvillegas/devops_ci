@@ -49,4 +49,20 @@ public class Invoice {
    public void setAmount(double amount) {
       this.amount = amount;
    }
+
+public Object getCustomerId() {
+    return null;
+}
+
+public Object getNumber() {
+    return null;
+}
+
+public Object getDetail() {
+    return null;
+}
+
+public Object getAmount() {
+    return null;
+}
 }

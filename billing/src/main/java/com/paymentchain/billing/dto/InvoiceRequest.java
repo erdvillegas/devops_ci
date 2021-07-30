@@ -38,7 +38,7 @@ public class InvoiceRequest {
       return this.detail;
    }
 
-public Object getAmount() {
+public double getAmount() {
     return this.amount;
 }
 
