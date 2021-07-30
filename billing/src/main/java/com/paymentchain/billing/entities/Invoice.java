@@ -50,19 +50,19 @@ public class Invoice {
       this.amount = amount;
    }
 
-public Object getCustomerId() {
-    return null;
+public long getCustomerId() {
+    return customerId;
 }
 
-public Object getNumber() {
-    return null;
+public String getNumber() {
+    return this.number;
 }
 
-public Object getDetail() {
-    return null;
+public String getgetDetail() {
+    return this.detail;
 }
 
-public Object getAmount() {
-    return null;
+public double getAmount() {
+    return this.amount;
 }
 }
