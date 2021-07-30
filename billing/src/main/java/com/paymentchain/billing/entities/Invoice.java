@@ -27,4 +27,14 @@ public class Invoice {
    private String number;
    private String detail;
    private double amount;  
+
+   public void setId(long customerId)   
+   {
+      this.id = customerId; 
+   }
+
+   public long getId()
+   {
+      return this.id;
+   }
 }

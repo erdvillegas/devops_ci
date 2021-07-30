@@ -26,4 +26,9 @@ public class InvoiceResponse {
    private String detail;
         @ApiModelProperty(name = "amount", required = true,example = "3659.23")
    private double amount; 
+
+   public void setInvoiceId(long invoiceId){
+     this.invoiceId = invoiceId;
+   }
+
 }
