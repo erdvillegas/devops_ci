@@ -26,4 +26,21 @@ public class InvoiceRequest {
       @ApiModelProperty(name = "amount", required = true,example = "3659.23")
    private double amount;    
    
+   public String getNumber() {
+      return this.number;
+   }
+
+   public long getCustomer(){
+      return this.customer;
+   }
+
+   public String getDetail(){
+      return this.detail;
+   }
+
+public double getAmount() {
+    return this.amount;
+}
+
+
 }
