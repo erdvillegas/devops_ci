@@ -68,7 +68,6 @@ public class BasicApplicationTests {
 
     /**
      * Test call of create method, on weblayer.
-     * Crear un nuevo registro
      */
     @Test
     public void testCreate() throws Exception {
